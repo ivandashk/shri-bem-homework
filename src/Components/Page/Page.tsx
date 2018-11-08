@@ -1,12 +1,18 @@
 import * as React from 'react';
+import Footer from '../Footer/Footer';
+import Header from '../Header/Header';
 import './Page.scss'
 
-class App extends React.Component {
+class Page extends React.Component {
   public render() {
     return (
-        <div className="main-page" />
+        <div className="main-page">
+            <Header />
+            <div />
+            <Footer />
+        </div>
     );
   }
 }
 
-export default App;
+export default Page;

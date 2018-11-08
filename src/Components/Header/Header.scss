@@ -1,0 +1,55 @@
+@import '../variables';
+
+.header {
+    align-items: center;
+    border-bottom: 1px $color-header-border solid;
+    display: grid;
+    grid-area: header;
+    grid-template-areas: 
+        "logo nav";
+    grid-template-columns: 160px 1fr;
+    height: 92px;
+    padding-left: 40px;
+    z-index: 99;
+
+    @media screen and (max-width: $screen-md) {
+        grid-template-areas: 
+            "logo nav expander";
+        grid-template-columns: 160px 1fr 16px;
+        background-color: $color-background;
+        border-bottom: none;
+        height: 64px;
+        padding: 0 20px;
+        position: fixed;
+        width: calc(100% - 40px);
+    }
+
+    &__logo {
+        grid-area: logo;
+        margin-right: 52px;
+    }
+
+    &__nav {
+        @media screen and (max-width: $screen-md) {
+            display: none;
+        }
+    }
+
+    &__expander {
+        background: url(./icon_list_m.png) no-repeat center center;
+        border: none;
+        cursor: pointer;
+        display: none;
+        height: 16px;
+        width: 16px;
+        
+        @media screen and (max-width: $screen-md) {
+            grid-column: 3;
+            display: block;
+        }
+
+        &:focus {
+            border: none;
+        }
+    }
+}
