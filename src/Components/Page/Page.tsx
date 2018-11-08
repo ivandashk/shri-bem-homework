@@ -1,10 +1,10 @@
 import * as React from 'react';
-import Page from './Components/Page/Page';
+import './Page.scss'
 
 class App extends React.Component {
   public render() {
     return (
-      <Page />
+        <div className="main-page" />
     );
   }
 }
