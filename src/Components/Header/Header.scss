@@ -1,6 +1,6 @@
 @import '../variables';
 
-.header {
+.Header {
     align-items: center;
     border-bottom: 1px $color-header-border solid;
     display: grid;
@@ -24,18 +24,18 @@
         width: calc(100% - 40px);
     }
 
-    &__logo {
+    &-Logo {
         grid-area: logo;
         margin-right: 52px;
     }
 
-    &__nav {
+    &-Nav {
         @media screen and (max-width: $screen-md) {
             display: none;
         }
     }
 
-    &__expander {
+    &-Expander {
         background: url(./icon_list_m.png) no-repeat center center;
         border: none;
         cursor: pointer;

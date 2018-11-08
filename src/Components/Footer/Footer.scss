@@ -1,6 +1,6 @@
 @import '../variables';
 
-.footer {
+.Footer {
     align-items: center;
     border-top: 1px $color-header-border solid;
     display: grid;
@@ -14,7 +14,7 @@
         display: none;
     }
 
-    &__copyright{
+    &-Copyright{
         color: $color-faded-text;
         font-size: $font-size-tiny;
         justify-self: right;

@@ -1,28 +1,29 @@
+import { cn } from '@bem-react/classname';
 import * as React from 'react';
-import '../Nav/Nav.scss'
-import './Header.scss'
-import logo from './Logo@1x.png'
+import { Nav } from '../Nav/Nav';
+import { ILink } from '../Nav/NavInterfaces';
+import './Header.scss';
+import Items from './HeaderItems';
+import logo from './Logo@1x.png';
 
-class Header extends React.Component {
-  public render() {
-    return (
-        <div className="header">
-            <div className="header__logo">
-                <img src={ logo } />
-            </div>
+const cnHeader = cn('Header');
+const items: ILink[] = Items;
 
-            <ul className="nav header__nav">
-                <li className="nav__item nav__item_horizontal nav__item_big">События</li>
-                <li className="nav__item nav__item_horizontal nav__item_big">Видеонаблюдение</li>
-                <li className="nav__item nav__item_horizontal nav__item_big">Сводка</li>
-                <li className="nav__item nav__item_horizontal nav__item_big">Устройства</li>
-                <li className="nav__item nav__item_horizontal nav__item_big">Сценарии</li>
-            </ul>
-
-            <button className="header__expander" />
+const Header: React.SFC = () => (
+    <div className={ cnHeader() }>
+        <div className={ cnHeader("Logo") }>
+            <img src={ logo } />
         </div>
-    );
-  }
-}
+
+        <Nav 
+            items={ items }
+            size="big"
+            orientation="horizontal"
+            className={ cnHeader("Nav") } 
+        />
+
+        <button className={ cnHeader("Expander") }/>
+    </div>
+);
 
 export default Header;

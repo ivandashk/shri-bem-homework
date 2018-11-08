@@ -1,6 +1,6 @@
 @import '../variables';
 
-.nav {
+.Nav {
     cursor: pointer;
     grid-area: nav;
     margin: 0;
@@ -11,19 +11,19 @@
         flex-direction: column;
     }
 
-    &__item {
+    &-Item {
         opacity: .6;
             
         &:hover {
             opacity: 1;
         }
 
-        &_horizontal {
+        &_orientation_horizontal {
             display: inline;
             text-decoration: none;
         }
 
-        &_vertical {
+        &_orientation_vertical {
             position: relative;
             list-style-type: none;
             margin: 0 0 30px;
@@ -31,7 +31,7 @@
             text-decoration: none;
         }
 
-        &_big {
+        &_size_big {
             color: $color-card-text-normal;
             font-size: $font-size-compact;
             font-weight: bold;
@@ -39,7 +39,7 @@
             margin-right: 27px;
         }
 
-        &_small {
+        &_size_small {
             color: $color-faded-text;
             font-size: $font-size-tiny;
             letter-spacing: 0.01px;
