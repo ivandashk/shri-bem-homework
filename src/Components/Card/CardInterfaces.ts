@@ -12,6 +12,11 @@ export interface ICardProps {
     hasImage?: boolean;
 }
 
+export interface IMeasurementProps {
+    text: string;
+    value: string;
+}
+
 export interface ICardDetailsProps extends IClassNameProps {
     type: string;
     size: string;
@@ -19,7 +24,7 @@ export interface ICardDetailsProps extends IClassNameProps {
     data?: ICardData;
 }
 
-interface ICardData {
+export interface ICardData extends IClassNameProps {
     type?: string;
     values?: object;
     temperature?: number;

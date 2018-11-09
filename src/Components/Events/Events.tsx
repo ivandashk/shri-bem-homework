@@ -11,6 +11,16 @@ items.forEach((item) => {
     if (item.icon === "cam" || (!!item.data && item.data.type === "graph")) {
         item.hasImage = true;
     }
+
+    if (!!item.data) {
+        if (!!item.data.temperature) {
+            item.data.type = "measurements";
+        } else if (!!item.data.albumcover) {
+            item.data.type = "music";
+        } else if (!!item.data.buttons) {
+            item.data.type = "buttons";
+        }
+    }
 })
 
 const Events: React.SFC = () => (
