@@ -1,0 +1,304 @@
+@import '../variables';
+
+.Card {
+    position: relative;
+    border-radius: 20px;
+    background-color: $color-card-background;
+    padding: 20px;
+    color: $color-card-text-normal;
+    display: flex;
+    flex-direction: column;
+
+    &:hover {
+        background-color: $color-card-background-hover;
+        box-shadow: 0 2px 6px 0 $color-card-shadow-hover;
+    };
+
+    &:hover .Card-Close {
+        display: block;
+    };
+
+    &:hover .Card-Expand {
+        display: block;
+
+        @media screen and (max-width: $screen-xs) {
+            display: none;
+        }
+    };
+
+    @media screen and (max-width: $screen-xs) {
+        padding: 20px 16px;
+        margin-bottom: 16px;
+    }
+
+    &_size_s {
+        grid-column: span 2;
+    };
+
+    &_size_m {
+        grid-column: span 3;
+
+        @media screen and (max-width: $screen-md) {
+            grid-column: span 4;
+        }
+    };
+
+    &_size_l {
+        grid-column: span 4;
+
+        @media screen and (max-width: $screen-lg) {
+            grid-column: span 5;
+        }
+
+        @media screen and (max-width: $screen-md) {
+            grid-column: span 4;
+        }
+    };
+
+    &_hasImage {
+        grid-row: span 3;
+    };
+
+    &_type_critical {
+        border-radius: 20px;
+        background-color: $color-card-background-critical;
+        color: $color-card-text-critical;
+
+        &:hover {
+            background-color: $color-card-background-critical;
+        };
+    };
+
+    &-Close {
+        cursor: pointer;
+        margin-left: auto;
+        align-self: baseline;
+        display: none;
+
+        @media screen and (max-width: $screen-xs) {
+            width: 10px;
+        }
+    };
+
+    &-Expand {
+        cursor: pointer;
+        margin-left: auto;
+        align-self: flex-end;
+        display: none;
+        width: 10px;
+        max-height: 36px;
+
+        &_absolute {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+        };
+    };
+
+    &-Row {
+        display: flex;
+    };
+
+    &-ExpanderRow {
+        display: flex;
+    };
+
+    &-Button {
+        user-select: none;
+        padding: 16px 53px;
+        border-radius: 8px;
+        font-weight: bold;
+        color: $color-card-text-dark;
+        background-color: $color-button;
+        margin-left: 18px;
+        font-size: $font-size-average;
+
+        @media screen and (max-width: $screen-xs) {
+            padding: 11px 53px;
+        }
+
+        &_accent {
+            background-color: $color-button-accent;
+            margin-left: 0;
+        };
+
+        &:hover {
+            cursor: pointer;
+            background-color: $color-accent-active;
+        }
+    };
+
+    &-Title {
+        font-size: $font-size-big;
+        font-weight: bold;
+        margin-left: 20px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+
+        @media screen and (max-width: $screen-xs) {
+            font-size: $font-size-small;
+            margin-left: 16px;
+            margin-top: 3px;
+            height: 36px;
+        }
+    };
+
+    &-BasicInfo {
+        margin: 15px 0 0 0;
+        display: flex;
+        justify-content: space-between;
+        font-size: $font-size-medium;
+
+        &_size_s {
+            @media screen and (min-width: $screen-xs) {
+                flex-direction: column;
+                min-height: 62px;
+            }
+        }
+
+        @media screen and (max-width: $screen-xs) {
+            font-size: $font-size-tiny;
+        }
+
+        &_withBottomMargin {
+            margin-bottom: 20px;
+        };
+    };
+
+    &-Description {
+        padding-top: 25px;
+        font-size: $font-size-average;
+        color: $color-card-text-dark;
+
+        @media screen and (max-width: $screen-xs) {
+            font-size: $font-size-medium;
+            padding-top: 15px;
+        }
+
+        &_size_l {
+            font-size: $font-size-big;
+
+            @media screen and (max-width: $screen-xs) {
+                font-size: $font-size-medium;
+            }
+        };
+    };
+
+    &-Measurements {
+        display: flex;
+        justify-content: space-between;
+        font-size: $font-size-medium;
+        padding-top: 22px;
+        color: $color-card-text-dark;
+
+        @media screen and (max-width: $screen-xs) {
+            font-size: $font-size-small;
+        }
+    };
+
+    &-Details {
+        margin: auto -21px -21px -21px;
+        border-radius: 20px;
+        color: $color-card-text-dark;
+        background-color: $color-card-background;
+        padding: 20px;
+        font-size: $font-size-average;
+
+        &:hover {
+            background-color: $color-card-background-hover;
+            box-shadow: 0 2px 6px 0 $color-card-shadow-hover;
+        };
+
+        @media screen and (max-width: $screen-xs) {
+            padding: 16px 16px 20px;
+            font-size: $font-size-medium;
+        }
+    };
+
+    &-Last-element {
+        padding-top: 20px;
+        margin: auto 0 0;
+
+        @media screen and (max-width: $screen-xs) {
+            padding-top: 16px;
+        }
+    }
+
+    &-Image-container {
+        padding-top: 30px;
+    }
+
+    &-Image {
+        user-select: none;
+
+        &_type_icon {
+            width: 48px;
+
+            @media screen and (max-width: $screen-xs) {
+                width: 36px;
+            }
+        }
+
+        &_picture_stats {
+            background: url("./images/stats.svg") no-repeat center center;
+            background-size: 100% 100%;
+        }
+
+        &_picture_key {
+            background: url("./images/key.svg") no-repeat center center;
+            background-size: 100% 100%;
+        }
+
+        &_picture_robot-cleaner {
+            background: url("./images/robot-cleaner.svg") no-repeat center center;
+            background-size: 100% 100%;
+        }
+
+        &_picture_router {
+            background: url("./images/router.svg") no-repeat center center;
+            background-size: 100% 100%;
+        }
+
+        &_picture_thermal {
+            background: url("./images/thermal.svg") no-repeat center center;
+            background-size: 100% 100%;
+        }
+
+        &_picture_ac {
+            background: url("./images/ac-white.svg") no-repeat center center;
+            background-size: 100% 100%;
+        }
+
+        &_picture_music {
+            background: url("./images/music.svg") no-repeat center center;
+            background-size: 100% 100%;
+        }
+
+        &_picture_fridge {
+            background: url("./images/fridge.svg") no-repeat center center;
+            background-size: 100% 100%;
+        }
+
+        &_picture_battery {
+            background: url("./images/battery.svg") no-repeat center center;
+            background-size: 100% 100%;
+        }
+
+        &_picture_cam {
+            background: url("./images/cam-white.svg") no-repeat center center;
+            background-size: 100% 100%;
+        }
+
+        &_picture_kettle {
+            background: url("./images/kettle.svg") no-repeat center center;
+            background-size: 100% 100%;
+        }
+
+        &_attachement {
+            border-radius: 20px;
+            height: 100%;
+            width: 100%;
+        }
+    }
+}
