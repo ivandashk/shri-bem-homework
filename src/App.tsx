@@ -1,8 +1,7 @@
 import * as React from 'react';
+import './App.scss';
 import Page from './Components/Page/Page';
 
-const App: React.SFC = () => (
+export const App: React.SFC = () => (
   <Page />
 );
-
-export default App;

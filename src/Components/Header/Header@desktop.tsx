@@ -9,7 +9,7 @@ import logo from './Logo@1x.png';
 const cnHeader = cn('Header');
 const items: ILink[] = Items;
 
-const Header: React.SFC = () => (
+export const Header: React.SFC = () => (
     <div className={ cnHeader() }>
         <div className={ cnHeader("Logo") }>
             <img src={ logo } />
@@ -21,9 +21,5 @@ const Header: React.SFC = () => (
             orientation="horizontal"
             className={ cnHeader("Nav") } 
         />
-
-        <button className={ cnHeader("Expander") }/>
     </div>
 );
-
-export default Header;

@@ -18,14 +18,6 @@
         display: block;
     };
 
-    &:hover .Card-Expand {
-        display: block;
-
-        @media screen and (max-width: $screen-xs) {
-            display: none;
-        }
-    };
-
     @media screen and (max-width: $screen-xs) {
         padding: 20px 16px;
         margin-bottom: 16px;
