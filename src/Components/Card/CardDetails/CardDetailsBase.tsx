@@ -7,7 +7,7 @@ import { ICardDetailsProps } from '../CardInterfaces';
 const cnCard = cn('Card');
 
 export const CardDetailsBase: React.SFC<ICardDetailsProps> = ({ description, size, data }) => (
-    <div>
+    <React.Fragment>
         <div className={ cnCard("Description", { size }) }>
             { description }
         </div>
@@ -28,5 +28,5 @@ export const CardDetailsBase: React.SFC<ICardDetailsProps> = ({ description, siz
             />
             : undefined
         }
-    </div>
+    </React.Fragment>
 );

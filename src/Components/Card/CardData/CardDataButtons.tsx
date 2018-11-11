@@ -7,8 +7,8 @@ import { ICardData } from '../CardInterfaces';
 
 const cnCard = cn('Card');
 
-const CardDataTypeButtons:  ModBody<ICardData> = (Base, { buttons }) => (
-    <div className={ cnCard("Row") }>
+const CardDataTypeButtons:  ModBody<ICardData> = (Base, { className, buttons }) => (
+    <div className={ cnCard("Row", [cnCard("LastElement")]) }>
         {
             !!buttons 
             ? <React.Fragment>
