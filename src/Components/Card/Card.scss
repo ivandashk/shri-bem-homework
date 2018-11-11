@@ -200,7 +200,7 @@
         }
     }
 
-    &-Image-container {
+    &-ImageContainer {
         padding-top: 30px;
     }
 
@@ -213,6 +213,12 @@
             @media screen and (max-width: $screen-xs) {
                 width: 36px;
             }
+        }
+
+        &_type_attachement {
+            border-radius: 20px;
+            height: 100%;
+            width: 100%;
         }
 
         &_picture_stats {
@@ -268,12 +274,6 @@
         &_picture_kettle {
             background: url("./images/kettle.svg") no-repeat center center;
             background-size: 100% 100%;
-        }
-
-        &_attachement {
-            border-radius: 20px;
-            height: 100%;
-            width: 100%;
         }
     }
 }

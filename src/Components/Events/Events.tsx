@@ -5,12 +5,23 @@ import { ICardProps } from '../Card/CardInterfaces';
 import EventItems from './EventItems';
 import './Events.scss'
 
+import cameraImage from './bitmap.png'
+import graphImage from './Richdata.svg'
+
 const cnEvents = cn('Events');
 const items: ICardProps[] = EventItems;
 items.forEach((item) => {
-    if (item.icon === "cam" || (!!item.data && item.data.type === "graph")) {
+    if (item.icon === "cam") {
         item.hasImage = true;
+        item.data = {};
+        item.data.image = cameraImage;
     }
+
+    if (!!item.data && item.data.type === "graph") {
+        item.hasImage = true;
+        item.data.image = graphImage;
+    }
+
 
     if (!!item.data) {
         if (!!item.data.temperature) {
@@ -19,6 +30,8 @@ items.forEach((item) => {
             item.data.type = "music";
         } else if (!!item.data.buttons) {
             item.data.type = "buttons";
+        } else if (!!item.data.image) {
+            item.data.type = "image";
         }
     }
 })
