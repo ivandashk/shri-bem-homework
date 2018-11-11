@@ -8,7 +8,7 @@ import Items from './FooterItems';
 const cnFooter = cn('Footer');
 const items: ILink[] = Items;
 
-const Footer: React.SFC = () => (
+export const Footer: React.SFC = () => (
     <div className={ cnFooter() }>
 
         <Nav 
@@ -22,5 +22,3 @@ const Footer: React.SFC = () => (
         </div>
     </div>
 )
-
-export default Footer;
