@@ -1,9 +1,9 @@
 import { cn } from '@bem-react/classname';
 import { ModBody, withBemMod } from '@bem-react/core';
 import * as React from 'react';
+import Measurement from '../../Measurement/Measurement';
 import '../Card.scss'
 import { ICardData } from '../CardInterfaces';
-import Measurement from './Measurement/Measurement';
 
 const cnCard = cn('Card');
 

@@ -1,9 +1,13 @@
 import { cn } from '@bem-react/classname';
 import * as React from 'react';
-import { IMeasurementProps } from "../../CardInterfaces"
 import './Measurement.scss'
 
 const cnMeasurement = cn('Measurement');
+
+export interface IMeasurementProps {
+    text: string;
+    value: string;
+}
 
 const Measurement:  React.SFC<IMeasurementProps> = ({ text, value }) => (
     <div className={ cnMeasurement()  }>

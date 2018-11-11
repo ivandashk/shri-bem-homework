@@ -12,11 +12,6 @@ export interface ICardProps {
     hasImage?: boolean;
 }
 
-export interface IMeasurementProps {
-    text: string;
-    value: string;
-}
-
 export interface ICardDetailsProps extends IClassNameProps {
     type: string;
     size: string;

@@ -1,0 +1,26 @@
+@import '../variables';
+
+.Button {
+    user-select: none;
+    padding: 16px 53px;
+    border-radius: 8px;
+    font-weight: bold;
+    color: $color-card-text-dark;
+    background-color: $color-button;
+    margin-left: 18px;
+    font-size: $font-size-average;
+
+    @media screen and (max-width: $screen-xs) {
+        padding: 11px 53px;
+    }
+
+    &_accent {
+        background-color: $color-button-accent;
+        margin-left: 0;
+    };
+
+    &:hover {
+        cursor: pointer;
+        background-color: $color-accent-active;
+    }
+};
