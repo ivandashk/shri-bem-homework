@@ -1,5 +1,20 @@
+@import './Components/variables';
+
 html, body {
   font-family: ArialMT, Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
+}
+
+.Page {
+  background-color: $color-background;
+  display: grid;
+  grid-template-areas: 
+      "header"
+      "events-page"
+      "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: 92px 1fr 64px;
+  height: 100vh;
+  width: 100%;
 }
