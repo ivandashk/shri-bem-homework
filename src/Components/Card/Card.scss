@@ -8,6 +8,7 @@
     color: $color-card-text-normal;
     display: flex;
     flex-direction: column;
+    outline: none;
 
     &:hover {
         background-color: $color-card-background-hover;
@@ -17,6 +18,10 @@
     &:hover .Card-Close {
         display: block;
     };
+
+    &:focus-visible {
+        outline: 2px solid $color-focus-ring;
+    }
 
     @media screen and (max-width: $screen-xs) {
         padding: 20px 16px;
