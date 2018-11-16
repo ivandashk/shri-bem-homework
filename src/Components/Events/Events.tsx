@@ -37,8 +37,8 @@ items.forEach((item) => {
 })
 
 const Events: React.SFC = () => (
-    <div className={ cnEvents() }>
-        <div className={ cnEvents("Title") }>Лента событий</div>
+    <section className={ cnEvents() }>
+        <h1 className={ cnEvents("Title") }>Лента событий</h1>
         <div className={ cnEvents("Ribbon") }>
             {
                 items.map((item) => { return(
@@ -58,7 +58,7 @@ const Events: React.SFC = () => (
                 })
             }
         </div>
-    </div>
+    </section>
 );
 
 export default Events;

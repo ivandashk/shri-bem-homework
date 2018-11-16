@@ -10,7 +10,7 @@ const cnHeader = cn('Header');
 const items: ILink[] = Items;
 
 export const Header: React.SFC = () => (
-    <div className={ cnHeader() }>
+    <header className={ cnHeader() }>
         <div className={ cnHeader("Logo") }>
             <img src={ logo } />
         </div>
@@ -21,5 +21,5 @@ export const Header: React.SFC = () => (
             orientation="horizontal"
             className={ cnHeader("Nav") } 
         />
-    </div>
+    </header>
 );

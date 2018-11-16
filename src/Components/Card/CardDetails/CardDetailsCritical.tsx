@@ -10,9 +10,9 @@ const cnDescription = cn('Description');
 
 const CardDetailsTypeCritical:  ModBody<ICardDetailsProps> = (Base, { description, size, data }) => (
     <div className={ cnCard("Details") }>
-        <div className={ cnDescription({ size }) }>
+        <p className={ cnDescription({ size }) }>
             { description }
-        </div>
+        </p>
 
         {
             !!data 

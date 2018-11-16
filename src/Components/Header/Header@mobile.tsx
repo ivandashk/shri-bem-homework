@@ -6,11 +6,11 @@ import logo from './Logo@1x.png';
 const cnHeader = cn('Header');
 
 export const Header: React.SFC = () => (
-    <div className={ cnHeader() }>
+    <header className={ cnHeader() }>
         <div className={ cnHeader("Logo") }>
             <img src={ logo } />
         </div>
 
         <button className={ cnHeader("Expander") }/>
-    </div>
+    </header>
 );

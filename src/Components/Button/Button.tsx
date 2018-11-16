@@ -10,7 +10,7 @@ interface IButtonProps {
 }
 
 const Button:  React.SFC<IButtonProps> = ({ text, accent }) => (
-    <div className={ cnButton({ accent }) }>{ text }</div>
+    <button className={ cnButton({ accent }) }>{ text }</button>
 );
 
 export default Button;

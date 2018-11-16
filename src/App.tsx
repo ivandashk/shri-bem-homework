@@ -18,11 +18,11 @@ export const App: React.SFC = () => (
             const Footer = registry.get(cnFooter());
 
             return(
-            <div className={ cnPage() }>
+            <main className={ cnPage() }>
                 <Header />
                 <Events />
                 <Footer />
-            </div>
+            </main>
             );
         }}
     </RegistryConsumer>
