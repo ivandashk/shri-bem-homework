@@ -17,7 +17,7 @@ const Card: React.SFC<ICardProps> = ({ type, icon, title, source, time, size, de
             <img className={ cnCard("Close") } src={ type === "critical" ? crossWhite : cross }/>
         </div>
 
-        <div className={ type === "critical" ? cnCard("BasicInfo", { withBottomMargin: true }) : cnCard("BasicInfo", { size }) }>
+        <div className={ type === "critical" ? cnCard("BasicInfo", { mb: 20 }) : cnCard("BasicInfo", { size }) }>
             <div>{ source }</div>
             <time>{ time }</time>
         </div>
