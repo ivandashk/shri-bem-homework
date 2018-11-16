@@ -12,16 +12,18 @@ interface INavProps extends INavPropsBase {
 }
 
 export const Nav: React.SFC<INavProps> = ({ items, className, size, orientation }) => (
-    <ul className={ cnNav(null, [className]) }>
-        {
-            items.map((item) => { return(
-                <NavItem 
-                    key={ item.name }
-                    item={ item }
-                    size={ size }
-                    orientation={ orientation }
-                />)
-            })
-        }
-    </ul>
+    <nav>
+        <ul className={ cnNav(null, [className]) }>
+            {
+                items.map((item) => { return(
+                    <NavItem 
+                        key={ item.name }
+                        item={ item }
+                        size={ size }
+                        orientation={ orientation }
+                    />)
+                })
+            }
+        </ul>
+    </nav>
 );

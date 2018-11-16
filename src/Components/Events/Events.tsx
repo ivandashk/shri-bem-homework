@@ -15,11 +15,13 @@ items.forEach((item) => {
         item.hasImage = true;
         item.data = {};
         item.data.image = cameraImage;
+        item.data.alt = "Данные с камеры";
     }
 
     if (!!item.data && item.data.type === "graph") {
         item.hasImage = true;
         item.data.image = graphImage;
+        item.data.alt = "График";
     }
 
 
@@ -37,8 +39,8 @@ items.forEach((item) => {
 })
 
 const Events: React.SFC = () => (
-    <div className={ cnEvents() }>
-        <div className={ cnEvents("Title") }>Лента событий</div>
+    <section className={ cnEvents() }>
+        <h1 className={ cnEvents("Title") }>Лента событий</h1>
         <div className={ cnEvents("Ribbon") }>
             {
                 items.map((item) => { return(
@@ -58,7 +60,7 @@ const Events: React.SFC = () => (
                 })
             }
         </div>
-    </div>
+    </section>
 );
 
 export default Events;

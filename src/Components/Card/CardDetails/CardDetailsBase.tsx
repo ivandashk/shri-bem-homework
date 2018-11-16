@@ -8,9 +8,9 @@ const cnCard = cn('Card');
 
 export const CardDetailsBase: React.SFC<ICardDetailsProps> = ({ description, size, data }) => (
     <React.Fragment>
-        <div className={ cnCard("Description", { size }) }>
+        <p className={ cnCard("Description", { size }) }>
             { description }
-        </div>
+        </p>
 
         {
             !!data 
@@ -25,6 +25,7 @@ export const CardDetailsBase: React.SFC<ICardDetailsProps> = ({ description, siz
                 volume={ data.volume }
                 buttons={ data.buttons }
                 image={ data.image }
+                alt={ data.alt }
             />
             : undefined
         }

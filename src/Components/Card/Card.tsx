@@ -10,16 +10,16 @@ import cross from './images/cross.svg'
 const cnCard = cn('Card');
 
 const Card: React.SFC<ICardProps> = ({ type, icon, title, source, time, size, description, data, hasImage }) => (
-    <div className={ cnCard({ size, type, hasImage }) }>
+    <article className={ cnCard({ size, type, hasImage }) } tabIndex={ 0 }>
         <div className={ cnCard("Row") }>
             <div className={ cnCard("Image", { type: "icon", picture: icon })} />
-            <div className={ cnCard("Title") }>{ title }</div>
+            <h2 className={ cnCard("Title") }>{ title }</h2>
             <img className={ cnCard("Close") } src={ type === "critical" ? crossWhite : cross }/>
         </div>
 
-        <div className={ type === "critical" ? cnCard("BasicInfo", { withBottomMargin: true }) : cnCard("BasicInfo", { size }) }>
+        <div className={ type === "critical" ? cnCard("BasicInfo", { mb: 20 }) : cnCard("BasicInfo", { size }) }>
             <div>{ source }</div>
-            <div>{ time }</div>
+            <time>{ time }</time>
         </div>
 
         {
@@ -32,7 +32,7 @@ const Card: React.SFC<ICardProps> = ({ type, icon, title, source, time, size, de
             /> 
             : undefined
         }
-    </div>
+    </article>
 );
 
 export default Card;

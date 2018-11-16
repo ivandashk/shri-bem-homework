@@ -5,9 +5,13 @@ import { App as AppCommon } from './App';
 import { Footer } from "./Components/Footer/Footer@mobile"
 import { Header } from "./Components/Header/Header@mobile"
 
-const registry = new Registry({ id: cn("App")() });
+const cnApp = cn("App");
+const cnHeader = cn("Header");
+const cnFooter = cn("Header");
 
-registry.set(cn("Header")(), Header);
-registry.set(cn("Footer")(), Footer);
+const registry = new Registry({ id: cnApp() });
+
+registry.set(cnHeader(), Header);
+registry.set(cnFooter(), Footer);
 
 export const AppMobile = withRegistry(registry)(AppCommon);

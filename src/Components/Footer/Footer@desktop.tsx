@@ -9,7 +9,7 @@ const cnFooter = cn('Footer');
 const items: ILink[] = Items;
 
 export const Footer: React.SFC = () => (
-    <div className={ cnFooter() }>
+    <footer className={ cnFooter() }>
 
         <Nav 
             items={ items }
@@ -20,5 +20,5 @@ export const Footer: React.SFC = () => (
         <div className={ cnFooter("Copyright") }>
             © 2001–2017  ООО «Яндекс»
         </div>
-    </div>
+    </footer>
 )

@@ -30,4 +30,5 @@ export interface ICardData extends IClassNameProps {
     volume?: number;
     buttons?: string[];
     image?: string;
+    alt?: string;
 }

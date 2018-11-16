@@ -10,7 +10,9 @@ interface INavItemProps extends INavPropsBase {
 }
 
 export const NavItem: React.SFC<INavItemProps> = ({ item, size, orientation }) => (
-    <a className={ cnNav('Item', { size, orientation }) } href={ item.href }>{ item.name }</a>
+    <li className={ cnNav('Item', { size, orientation }) }>
+        <a className={ cnNav('Link') } href={ item.href }>{ item.name }</a>
+    </li>
 );
 
 export default NavItem;
