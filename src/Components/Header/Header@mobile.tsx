@@ -8,7 +8,7 @@ const cnHeader = cn('Header');
 export const Header: React.SFC = () => (
     <header className={ cnHeader() }>
         <div className={ cnHeader("Logo") }>
-            <img src={ logo } />
+            <img src={ logo } alt="Логотип 'Яндекс'"/>
         </div>
 
         <button className={ cnHeader("Expander") }/>

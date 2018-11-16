@@ -25,6 +25,7 @@ export const CardDetailsBase: React.SFC<ICardDetailsProps> = ({ description, siz
                 volume={ data.volume }
                 buttons={ data.buttons }
                 image={ data.image }
+                alt={ data.alt }
             />
             : undefined
         }

@@ -27,6 +27,7 @@ const CardDetailsTypeCritical:  ModBody<ICardDetailsProps> = (Base, { descriptio
                 volume={ data.volume }
                 buttons={ data.buttons }
                 image={ data.image }
+                alt={ data.alt }
             />
             : undefined
         }

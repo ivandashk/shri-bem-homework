@@ -15,11 +15,13 @@ items.forEach((item) => {
         item.hasImage = true;
         item.data = {};
         item.data.image = cameraImage;
+        item.data.alt = "Данные с камеры";
     }
 
     if (!!item.data && item.data.type === "graph") {
         item.hasImage = true;
         item.data.image = graphImage;
+        item.data.alt = "График";
     }
 
 

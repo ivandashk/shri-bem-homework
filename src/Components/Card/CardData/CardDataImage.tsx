@@ -6,9 +6,9 @@ import { ICardData } from '../CardInterfaces';
 
 const cnCard = cn('Card');
 
-const CardDataTypeImage:  ModBody<ICardData> = (Base, { image }) => (
+const CardDataTypeImage:  ModBody<ICardData> = (Base, { image, alt }) => (
     <div className={ cnCard("ImageContainer", [cnCard("LastElement")]) }>
-        <img className={ cnCard("Image", { type: "attachement"}) } src={ image } />
+        <img className={ cnCard("Image", { type: "attachement"}) } src={ image } alt={ alt }/>
     </div>
 );
 
